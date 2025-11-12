@@ -1,17 +1,39 @@
-    * {
+/* Reset defaults */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-body {
-  background-image: url("chineselan.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-color: lightcoral;
-  font-family: Arial, Helvetica, sans-serif;
+/* Background video setup */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.75; /* slightly dimmed for better contrast */
+  z-index: -2;
+}
 
+/* Gradient overlay for cinematic look */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8));
+  z-index: -1;
+}
+
+/* Body styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* Header styling */
@@ -19,8 +41,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 30px 50px;
-  background-color: rgb(19, 134, 134);
+  padding: 25px 60px;
+  background: rgba(0, 0, 0, 0.55);
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
 }
 
 /* LOGO */
@@ -30,54 +56,135 @@ body {
   transition: all 0.4s ease-in-out;
 }
 
-/* Hover effect for logo */
 .logo img:hover {
   transform: scale(1.2) translate(-5px);
   filter: brightness(1.5) hue-rotate(30deg) drop-shadow(0 0 10px yellowgreen);
 }
 
 /* NAVIGATION */
-.nav-menu {
+.nav-menu ul {
   display: flex;
   gap: 40px;
-}
-
-.nav-menu li {
   list-style: none;
 }
 
 .nav-menu a {
   text-decoration: none;
-  color: black;
-  font-size: 20px;
+  color: white;
+  font-size: 18px;
   font-weight: bold;
-  transition: all 0.5s ease;
+  transition: all 0.4s ease;
 }
 
 .nav-menu a:hover {
-  color: blueviolet;
-  transform: translateY(-5px);
+  color: #00ffff;
+  transform: translateY(-3px);
 }
 
 /* CONTACT BUTTON */
 .contact-button .btn {
-  background-color: white;
-  color: cyan;
-  padding: 12px 25px;
+  background: linear-gradient(135deg, #1dd3b0, #11998e);
+  color: white;
+  padding: 12px 28px;
   border: none;
-  border-radius: 20px;
+  border-radius: 30px;
   font-weight: bold;
   font-size: 17px;
+  cursor: pointer;
+  text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .contact-button .btn:hover {
-  background-color: rgb(63, 94, 126);
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(135deg, #38ef7d, #11998e);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
-.contact-button .btn a {
-  text-decoration: none;
-  color: inherit;
+/* HERO CONTENT (animated text overlay) */
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 5;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #00ffff, #ff00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: slideInDown 1.5s ease-out;
+}
+
+.hero-content h1 span {
+  color: #00ffff;
+  -webkit-text-fill-color: #00ffff;
+}
+
+.hero-content p {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #f1f1f1;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+  animation: fadeUp 2s ease-out;
+}
+
+/* ANIMATIONS */
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -80%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
 }

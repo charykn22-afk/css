@@ -5,162 +5,181 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Arcon Civil Header</title>
   <link rel="stylesheet" href="./styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js"></script>
 </head>
+
 <body>
-  <!-- Fixed Background Video -->
-  <div class="video-container" aria-hidden="true">
-    <video autoplay muted loop playsinline id="bg-video">
+
+  <!-- HERO SECTION -->
+  <section class="hero-section" id="home">
+    <video autoplay muted loop playsinline class="hero-video">
       <source src="dmo.mp4" type="video/mp4" />
     </video>
-    <div class="overlay"></div>
-  </div>
 
-  <!-- HEADER -->
-  <header class="header" id="main-header" role="banner">
-    <div class="logo">
-      <img src="ACLogo.png" alt="Arcon Civil Logo" />
+    <div class="hero-overlay"></div>
+
+    <!-- HEADER -->
+    <header class="header" id="main-header">
+      <div class="logo">
+        <img src="ACLogo.png" alt="Arcon Civil Logo" />
+      </div>
+
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="#home" class="scroll-home">HOME</a></li>
+          <li><a href="#category-section" class="category-link">CATEGORY</a></li>
+          <li><a href="#about-section" class="about-link">ABOUT US</a></li>
+          <li><a href="#">WISHLIST</a></li>
+          <li><a href="#">PRODUCTS</a></li>
+        </ul>
+      </nav>
+
+      <div class="contact-button">
+        <a href="#contact-section" class="btn">Get In Touch</a>
+      </div>
+    </header>
+
+    <!-- HERO TEXT -->
+    <div class="hero-content">
+      <h1>WELCOME TO <span>NEX GEN 5.1 DIGITAL SOUND</span></h1>
+      <p>
+        BEST ATMOS FEELING — THERE'S NO STOPPING WITH THE FEELING.<br />
+        ALL YOU WANT TO HEAR IS HERE.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- CATEGORY SECTION -->
+  <section id="category-section" class="category-section">
+    <h2 class="category-title">CATEGORY</h2>
+
+    <div class="category-container">
+      <div class="scroll-track">
+        <img src="cat1.svg" alt="">
+        <img src="cat2.png" alt="">
+        <img src="cat3.png" alt="">
+        <img src="cat4.avif" alt="">
+        <img src="cat5.svg" alt="">
+        <img src="cat6.webp" alt="">
+        <img src="cat1.svg" alt="">
+        <img src="cat2.png" alt="">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ABOUT SECTION -->
+  <section id="about-section" class="about-section">
+    <video autoplay muted loop playsinline class="about-video">
+      <source src="aboutbg.mp4" type="video/mp4" />
+    </video>
+
+    <div class="about-overlay"></div>
+
+    <div class="about-content">
+      <h2>ABOUT US</h2>
+      <p>
+        Welcome to Arcon Civil, where expertise and innovation blend seamlessly to achieve excellence across both project consulting and delivery.<br><br>
+        Collaborating closely with our clients, we offer tailored solutions that optimise project feasibility, planning and execution strategies. Our ability to effectively manage risk, whilst minimising project delays and cost overruns is attributed to our team of highly skilled professionals dedicated to upholding the highest standards of quality, safety and sustainability.<br><br>
+        <strong>Arcon Civil – Building a better and brighter future for generations to come.</strong>
+      </p>
+    </div>
+  </section>
+
+
+  <!-- FEATURES SECTION -->
+  <section class="features-section">
+    <div class="feature-box">
+      <img src="img1.png" alt="">
+      <p>Feel every beat with the power of 5.1 digital sound...</p>
     </div>
 
-    <nav class="nav-menu" role="navigation" aria-label="Primary">
-      <ul>
-        <li><a href="#">HOME</a></li>
-        <li><a href="#category-section" class="category-link">CATEGORY</a></li>
-        <li><a href="#about-section" class="about-link">ABOUT US</a></li>
-        <li><a href="#">WISHLIST</a></li>
-        <li><a href="#">PRODUCTS</a></li>
-      </ul>
-    </nav>
-
-    <div class="contact-button">
-      <a href="#" class="btn">Get In Touch</a>
+    <div class="feature-box">
+      <img src="img2.png" alt="">
+      <p>The 5.1 digital sound system offers precise and balanced tones...</p>
     </div>
-  </header>
 
-  <!-- HERO TEXT -->
-  <main>
-    <section class="hero">
-      <div class="hero-content">
-        <h1>WELCOME TO <span>NEX GEN 5.1 DIGITAL SOUND</span></h1>
-        <p>
-          BEST ATMOS FEELING — THERE'S NO STOPPING WITH THE FEELING.<br />
-          ALL YOU WANT TO HEAR IS HERE.
-        </p>
-      </div>
-    </section>
+    <div class="feature-box">
+      <img src="img3.png" alt="">
+      <p>Powerful. Clear. Immersive. Upgrade your audio experience...</p>
+    </div>
 
-    <!-- CATEGORY SECTION -->
-    <section id="category-section" class="category-section">
-      <h2 class="category-title">CATEGORY</h2>
+    <div class="feature-box">
+      <img src="img4.png" alt="">
+      <p>Bring the theater home with 5.1 digital surround sound...</p>
+    </div>
+  </section>
 
-      <div class="category-container" aria-hidden="false">
-        <div class="scroll-track">
-          <img src="cat1.svg" alt="category 1">
-          <img src="cat2.png" alt="category 2">
-          <img src="cat3.png" alt="category 3">
-          <img src="cat4.avif" alt="category 4">
-          <img src="cat5.svg" alt="category 5">
-          <img src="cat6.webp" alt="category 6">
 
-          <!-- duplicate set for seamless scroll -->
-          <img src="cat1.svg" alt="">
-          <img src="cat2.png" alt="">
-          <img src="cat3.png" alt="">
-          <img src="cat4.avif" alt="">
-          <img src="cat5.svg" alt="">
-          <img src="cat6.webp" alt="">
-        </div>
-      </div>
-    </section>
+  <!-- CONTACT US SECTION -->
+  <section id="contact-section" class="contact-section">
+    <div class="contact-container">
 
-    <!-- ABOUT SECTION -->
-    <section id="about-section" class="about-section">
-      <video autoplay muted loop playsinline class="about-video" aria-hidden="true">
-        <source src="aboutbg.mp4" type="video/mp4" />
-      </video>
-
-      <div class="about-overlay" aria-hidden="true"></div>
-
-      <div class="about-content">
-        <h2>ABOUT US</h2>
-        <p>
-          Welcome to Arcon Civil, where expertise and innovation blend seamlessly to achieve excellence across both project consulting and delivery.<br><br>
-          Collaborating closely with our clients, we offer tailored solutions that optimise project feasibility, planning and execution strategies. Our ability to effectively manage risk, whilst minimising project delays and cost overruns is attributed to our team of highly skilled professionals dedicated to upholding the highest standards of quality, safety and sustainability.<br><br>
-          <strong>Arcon Civil – Building a better and brighter future for generations to come.</strong>
-        </p>
-      </div>
-    </section>
-
-    <!-- UPDATED FEATURES SECTION BELOW ABOUT US -->
-    <section class="features-section" aria-label="Features">
-      <div class="feature-box">
-        <img src="img1.png" alt="feature 1">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum nobis fuga beatae.</p>
+      <!-- QUICK LINKS -->
+      <div class="contact-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#home" class="scroll-home">Home</a></li>
+          <li><a href="#category-section">Category</a></li>
+          <li><a href="#about-section">About Us</a></li>
+          <li><a href="#">Wishlist</a></li>
+          <li><a href="#">Products</a></li>
+        </ul>
       </div>
 
-      <div class="feature-box">
-        <img src="img2.png" alt="feature 2">
-        <p>Doloribus dignissimos corrupti quam, accusantium libero aliquid laudantium sint fugiat ipsa.</p>
+      <!-- PROJECTS -->
+      <div class="contact-col">
+        <h3>Projects</h3>
+        <p>• NexGen Audio Systems</p>
+        <p>• Home Theater Setup</p>
+        <p>• Acoustic Wall Designs</p>
+        <p>• Custom Surround Sound Installations</p>
       </div>
 
-      <div class="feature-box">
-        <img src="img3.png" alt="feature 3">
-        <p>Quasi, vero magni. Excepturi accusamus impedit, fuga cupiditate molestiae voluptatum.</p>
+      <!-- CONTACT INFO -->
+      <div class="contact-col">
+        <h3>Contact Us</h3>
+        <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+        <p><i class="fas fa-envelope"></i> contact@arconcivil.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> Hyderabad, Telangana</p>
       </div>
 
-      <div class="feature-box">
-        <img src="img4.png" alt="feature 4">
-        <p>Nesciunt dolore iure repellat illum cumque modi doloremque nobis debitis.</p>
+      <!-- EXTRA INFO -->
+      <div class="contact-col">
+        <h3>More Info</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Vivamus eget tellus sit amet massa.</p>
       </div>
-    </section>
-  </main>
 
+    </div>
+  </section>
+
+
+
+
+  <!-- SMOOTH SCROLL JS -->
   <script>
-    // smooth scroll
-    document.querySelectorAll('.category-link, .about-link').forEach(link => {
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const target = document.querySelector(link.getAttribute('href'));
-        if (target) target.scrollIntoView({ behavior: 'smooth' });
-      });
+    document.querySelector('.scroll-home').addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    // header hide on scroll (improved)
-    (function () {
-      let lastScrollTop = 0;
-      const header = document.getElementById('main-header');
-      let ticking = false;
+    // hide header on scroll
+    let lastScrollTop = 0;
+    const header = document.getElementById('main-header');
 
-      window.addEventListener('scroll', () => {
-        if (!ticking) {
-          window.requestAnimationFrame(() => {
-            const current = window.scrollY;
-            if (current > lastScrollTop && current > 120) {
-              header.style.transform = 'translateY(-120%)';
-            } else {
-              header.style.transform = 'translateY(0)';
-            }
-            lastScrollTop = current <= 0 ? 0 : current;
-            ticking = false;
-          });
-          ticking = true;
-        }
-      });
-    })();
-
-    // Set CSS variable for header height so spacing is accurate
-    function setHeaderHeightVar() {
-      const header = document.getElementById('main-header');
-      const h = header.getBoundingClientRect().height;
-      document.documentElement.style.setProperty('--header-height', h + 'px');
-    }
-    // set on load and resize
-    window.addEventListener('load', setHeaderHeightVar);
-    window.addEventListener('resize', setHeaderHeightVar);
-    // also set after fonts load for accurate spacing
-    if (document.fonts) {
-      document.fonts.ready.then(setHeaderHeightVar);
-    }
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.scrollY;
+      if (currentScroll > lastScrollTop && currentScroll > 100) {
+        header.style.transform = 'translateY(-100%)';
+      } else {
+        header.style.transform = 'translateY(0)';
+      }
+      lastScrollTop = currentScroll;
+    });
   </script>
+
 </body>
 </html>

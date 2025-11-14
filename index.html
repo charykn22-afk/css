@@ -16,7 +16,6 @@
     <video autoplay muted loop playsinline class="hero-video">
       <source src="dmo.mp4" type="video/mp4" />
     </video>
-
     <div class="hero-overlay"></div>
 
     <!-- HEADER -->
@@ -36,7 +35,7 @@
       </nav>
 
       <div class="contact-button">
-        <a href="#contact-section" class="btn">Get In Touch</a>
+        <a href="#contact-section" class="btn neon-btn">Get In Touch</a>
       </div>
     </header>
 
@@ -44,17 +43,15 @@
     <div class="hero-content">
       <h1>WELCOME TO <span>NEX GEN 5.1 DIGITAL SOUND</span></h1>
       <p>
-        BEST ATMOS FEELING — THERE'S NO STOPPING WITH THE FEELING.<br />
+        BEST ATMOS FEELING — THERE'S NO STOPPING THE VIBES.<br />
         ALL YOU WANT TO HEAR IS HERE.
       </p>
     </div>
   </section>
 
-
   <!-- CATEGORY SECTION -->
   <section id="category-section" class="category-section">
     <h2 class="category-title">CATEGORY</h2>
-
     <div class="category-container">
       <div class="scroll-track">
         <img src="cat1.svg" alt="">
@@ -69,25 +66,29 @@
     </div>
   </section>
 
-
   <!-- ABOUT SECTION -->
   <section id="about-section" class="about-section">
     <video autoplay muted loop playsinline class="about-video">
       <source src="aboutbg.mp4" type="video/mp4" />
     </video>
 
-    <div class="about-overlay"></div>
+    <!-- Left transparent overlay -->
+    <div class="about-left-overlay"></div>
 
+    <!-- Vertically centered, slightly right-aligned content -->
     <div class="about-content">
       <h2>ABOUT US</h2>
       <p>
-        Welcome to Arcon Civil, where expertise and innovation blend seamlessly to achieve excellence across both project consulting and delivery.<br><br>
-        Collaborating closely with our clients, we offer tailored solutions that optimise project feasibility, planning and execution strategies. Our ability to effectively manage risk, whilst minimising project delays and cost overruns is attributed to our team of highly skilled professionals dedicated to upholding the highest standards of quality, safety and sustainability.<br><br>
+        Welcome to Arcon Civil, where expertise and innovation blend seamlessly
+        to achieve excellence across both project consulting and delivery.<br><br>
+        We offer tailored solutions that optimise project feasibility, planning
+        and execution strategies. Our ability to manage risk, minimise delays
+        and reduce cost overruns comes from our highly skilled professionals
+        committed to quality and sustainability.<br><br>
         <strong>Arcon Civil – Building a better and brighter future for generations to come.</strong>
       </p>
     </div>
   </section>
-
 
   <!-- FEATURES SECTION -->
   <section class="features-section">
@@ -95,29 +96,23 @@
       <img src="img1.png" alt="">
       <p>Feel every beat with the power of 5.1 digital sound...</p>
     </div>
-
     <div class="feature-box">
       <img src="img2.png" alt="">
       <p>The 5.1 digital sound system offers precise and balanced tones...</p>
     </div>
-
     <div class="feature-box">
       <img src="img3.png" alt="">
       <p>Powerful. Clear. Immersive. Upgrade your audio experience...</p>
     </div>
-
     <div class="feature-box">
       <img src="img4.png" alt="">
       <p>Bring the theater home with 5.1 digital surround sound...</p>
     </div>
   </section>
 
-
-  <!-- CONTACT US SECTION -->
+  <!-- CONTACT SECTION -->
   <section id="contact-section" class="contact-section">
     <div class="contact-container">
-
-      <!-- QUICK LINKS -->
       <div class="contact-col">
         <h3>Quick Links</h3>
         <ul>
@@ -128,8 +123,6 @@
           <li><a href="#">Products</a></li>
         </ul>
       </div>
-
-      <!-- PROJECTS -->
       <div class="contact-col">
         <h3>Projects</h3>
         <p>• NexGen Audio Systems</p>
@@ -137,36 +130,26 @@
         <p>• Acoustic Wall Designs</p>
         <p>• Custom Surround Sound Installations</p>
       </div>
-
-      <!-- CONTACT INFO -->
       <div class="contact-col">
         <h3>Contact Us</h3>
         <p><i class="fas fa-phone"></i> +91 98765 43210</p>
         <p><i class="fas fa-envelope"></i> contact@arconcivil.com</p>
         <p><i class="fas fa-map-marker-alt"></i> Hyderabad, Telangana</p>
       </div>
-
-      <!-- EXTRA INFO -->
       <div class="contact-col">
         <h3>More Info</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         <p>Vivamus eget tellus sit amet massa.</p>
       </div>
-
     </div>
   </section>
 
-
-
-
-  <!-- SMOOTH SCROLL JS -->
   <script>
     document.querySelector('.scroll-home').addEventListener('click', (e) => {
       e.preventDefault();
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    // hide header on scroll
     let lastScrollTop = 0;
     const header = document.getElementById('main-header');
 

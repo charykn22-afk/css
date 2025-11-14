@@ -1,49 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arcon Civil Header</title>
-    <meta name="robots" content="max-image-preview:large">
-    <link rel="stylesheet" href="./styles.css">
-    <!-- Google Font for modern typography -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arcon Civil Header</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-    <!-- Background Video -->
+  <!-- Fixed Background Video -->
+  <div class="video-container">
     <video autoplay muted loop playsinline id="bg-video">
-        <source src="dmo.mp4" type="video/mp4">
-        Your browser does not support the video tag.
+      <source src="dmo.mp4" type="video/mp4" />
     </video>
-
-    <!-- Dark Gradient Overlay -->
     <div class="overlay"></div>
+  </div>
 
-    <!-- Animated Overlaying Content -->
-    <div class="hero-content">
-        <h1>WELCOME TO <span>NEX GEN 5.1 DIGITAL SOUND</span></h1>
-        <p>BEST ATMOS FEELING — THERE'S NO STOPPING WITH THE FEELING.<br>ALL YOU WANT TO HEAR IS HERE.</p>
+  <!-- HEADER -->
+  <header class="header" id="main-header">
+    <div class="logo">
+      <img src="ACLogo.png" alt="Arcon Civil Logo" />
     </div>
 
-    <!-- Header Section -->
-    <header class="header">
-        <div class="logo">
-            <img src="ACLogo.png" alt="Arcon Civil Logo">
-        </div>
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#category-section" class="category-link">CATEGORY</a></li>
+        <li><a href="#about-section" class="about-link">ABOUT US</a></li>
+        <li><a href="#">WISHLIST</a></li>
+        <li><a href="#">PRODUCTS</a></li>
+      </ul>
+    </nav>
 
-        <nav class="nav-menu">
-            <ul>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">CATEGORY</a></li>
-                <li><a href="#">ABOUT US</a></li>
-                <li><a href="#">WISHLIST</a></li>
-                <li><a href="#">PRODUCTS</a></li>
-            </ul>
-        </nav>
+    <div class="contact-button">
+      <a href="#" class="btn">Get In Touch</a>
+    </div>
+  </header>
 
-        <div class="contact-button">
-            <a href="#" class="btn">Get In Touch</a>
-        </div>
-    </header>
+  <!-- HERO TEXT -->
+  <div class="hero-content">
+    <h1>WELCOME TO <span>NEX GEN 5.1 DIGITAL SOUND</span></h1>
+    <p>
+      BEST ATMOS FEELING — THERE'S NO STOPPING WITH THE FEELING.<br />
+      ALL YOU WANT TO HEAR IS HERE.
+    </p>
+  </div>
+
+  <!-- CATEGORY SECTION -->
+  <section id="category-section" class="category-section">
+    <h2 class="category-title">CATEGORY</h2>
+
+    <div class="category-container">
+      <div class="scroll-track">
+        <img src="cat1.svg" alt="">
+        <img src="cat2.png" alt="">
+        <img src="cat3.png" alt="">
+        <img src="cat4.avif" alt="">
+        <img src="cat5.svg" alt="">
+        <img src="cat6.webp" alt="">
+
+        <!-- duplicate -->
+        <img src="cat1.svg" alt="">
+        <img src="cat2.png" alt="">
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about-section" class="about-section">
+    <video autoplay muted loop playsinline class="about-video">
+      <source src="aboutbg.mp4" type="video/mp4" />
+    </video>
+
+    <div class="about-overlay"></div>
+
+    <div class="about-content">
+      <h2>ABOUT US</h2>
+      <p>
+        Welcome to Arcon Civil, where expertise and innovation blend seamlessly to achieve excellence across both project consulting and delivery.<br><br>
+        Collaborating closely with our clients, we offer tailored solutions that optimise project feasibility, planning and execution strategies. Our ability to effectively manage risk, whilst minimising project delays and cost overruns is attributed to our team of highly skilled professionals dedicated to upholding the highest standards of quality, safety and sustainability.<br><br>
+        <strong>Arcon Civil – Building a better and brighter future for generations to come.</strong>
+      </p>
+    </div>
+  </section>
+
+  <!-- UPDATED FEATURES SECTION BELOW ABOUT US -->
+  <section class="features-section">
+    <div class="feature-box">
+      <img src="img1.png" alt="">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum nobis fuga beatae.</p>
+    </div>
+
+    <div class="feature-box">
+      <img src="img2.png" alt="">
+      <p>Doloribus dignissimos corrupti quam, accusantium libero aliquid laudantium sint fugiat ipsa.</p>
+    </div>
+
+    <div class="feature-box">
+      <img src="img3.png" alt="">
+      <p>Quasi, vero magni. Excepturi accusamus impedit, fuga cupiditate molestiae voluptatum.</p>
+    </div>
+
+    <div class="feature-box">
+      <img src="img4.png" alt="">
+      <p>Nesciunt dolore iure repellat illum cumque modi doloremque nobis debitis.</p>
+    </div>
+  </section>
+
+  <script>
+    // Smooth scroll
+    document.querySelector('.category-link')
+      .addEventListener('click', (e) => {
+        e.preventDefault();
+        document.querySelector('#category-section')
+          .scrollIntoView({ behavior: 'smooth' });
+      });
+
+    document.querySelector('.about-link')
+      .addEventListener('click', (e) => {
+        e.preventDefault();
+        document.querySelector('#about-section')
+          .scrollIntoView({ behavior: 'smooth' });
+      });
+
+    // Header hide on scroll
+    let lastScrollTop = 0;
+    const header = document.getElementById('main-header');
+
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.scrollY;
+      if (currentScroll > lastScrollTop && currentScroll > 100) {
+        header.style.transform = 'translateY(-100%)';
+      } else {
+        header.style.transform = 'translateY(0)';
+      }
+      lastScrollTop = currentScroll;
+    });
+  </script>
 </body>
 </html>

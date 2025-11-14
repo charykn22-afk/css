@@ -39,7 +39,7 @@
       </div>
     </header>
 
-    <!-- HERO TEXT -->
+    <!-- HERO CONTENT -->
     <div class="hero-content">
       <h1>WELCOME TO <span>NEX GEN 5.1 DIGITAL SOUND</span></h1>
       <p>
@@ -54,20 +54,14 @@
     <h2 class="category-title">CATEGORY</h2>
     <div class="category-container">
       <div class="scroll-track">
-        <!-- Original images -->
         <img src="cat1.svg" alt="">
         <img src="cat2.png" alt="">
         <img src="cat3.png" alt="">
         <img src="cat4.avif" alt="">
         <img src="cat5.svg" alt="">
         <img src="cat6.webp" alt="">
-        <!-- Duplicate for seamless scroll -->
         <img src="cat1.svg" alt="">
         <img src="cat2.png" alt="">
-        <img src="cat3.png" alt="">
-        <img src="cat4.avif" alt="">
-        <img src="cat5.svg" alt="">
-        <img src="cat6.webp" alt="">
       </div>
     </div>
   </section>
@@ -77,11 +71,8 @@
     <video autoplay muted loop playsinline class="about-video">
       <source src="aboutbg.mp4" type="video/mp4" />
     </video>
-
-    <!-- Full transparent overlay -->
     <div class="about-overlay"></div>
 
-    <!-- Fully centered content -->
     <div class="about-content">
       <h2>ABOUT US</h2>
       <p>
@@ -119,6 +110,7 @@
   <!-- CONTACT SECTION -->
   <section id="contact-section" class="contact-section">
     <div class="contact-container">
+
       <div class="contact-col">
         <h3>Quick Links</h3>
         <ul>
@@ -129,26 +121,39 @@
           <li><a href="#">Products</a></li>
         </ul>
       </div>
+
       <div class="contact-col">
         <h3>Projects</h3>
-        <p>• NexGen Audio Systems</p>
-        <p>• Home Theater Setup</p>
-        <p>• Acoustic Wall Designs</p>
-        <p>• Custom Surround Sound Installations</p>
+        <ul>
+          <li><a href="#" target="_blank">NexGen Audio Systems</a></li>
+          <li><a href="#" target="_blank">Home Theater Setup</a></li>
+          <li><a href="#" target="_blank">Acoustic Wall Designs</a></li>
+          <li><a href="#" target="_blank">Custom Surround Sound Installations</a></li>
+        </ul>
       </div>
+
       <div class="contact-col">
         <h3>Contact Us</h3>
-        <p><i class="fas fa-phone"></i> +91 98765 43210</p>
-        <p><i class="fas fa-envelope"></i> contact@arconcivil.com</p>
-        <p><i class="fas fa-map-marker-alt"></i> Hyderabad, Telangana</p>
+        <ul class="contact-info">
+          <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+          <li><i class="fas fa-envelope"></i> contact@arconcivil.com</li>
+          <li><i class="fas fa-map-marker-alt"></i> Hyderabad, Telangana</li>
+        </ul>
       </div>
+
       <div class="contact-col">
         <h3>More Info</h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         <p>Vivamus eget tellus sit amet massa.</p>
       </div>
+
     </div>
   </section>
+
+  <!-- COPYRIGHT SECTION -->
+  <footer class="copyright-section">
+    <p>Copyright © 2025 Arcon Civil Pty Ltd. All rights reserved.</p>
+  </footer>
 
   <script>
     document.querySelector('.scroll-home').addEventListener('click', (e) => {
